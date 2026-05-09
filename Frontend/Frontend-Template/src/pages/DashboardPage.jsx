@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { dashboardService } from '../services/dashboardService';
 import DashboardCard from '../components/DashboardCard';
 import Loader from '../components/Loader';
@@ -71,27 +72,27 @@ const DashboardPage = () => {
       <div className="mt-8 bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="block p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
           >
             <h3 className="font-semibold text-blue-900">View Projects</h3>
             <p className="text-sm text-blue-700 mt-1">Manage your projects</p>
-          </a>
-          <a
-            href="/tasks"
+          </Link>
+          <Link
+            to="/projects"
             className="block p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-colors"
           >
             <h3 className="font-semibold text-green-900">View Tasks</h3>
             <p className="text-sm text-green-700 mt-1">Check your tasks</p>
-          </a>
-          <a
-            href="/projects/create"
+          </Link>
+          <Link
+            to="/projects/create"
             className="block p-4 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors"
           >
             <h3 className="font-semibold text-purple-900">Create Project</h3>
             <p className="text-sm text-purple-700 mt-1">Start a new project</p>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
